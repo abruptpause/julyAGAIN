@@ -805,12 +805,28 @@ label {
 
 .sidebar-left {
     width: 258px;
-    height: 100vh;
+    /* height: 100vh; */
+    /* height: 100%; */
     left: 0px;
     position: fixed;
-    overflow-y: auto;
-    overflow-x: visible;
-    z-index: 15;
+    top: 0;
+    /* overflow-y: auto; */
+    /* overflow-x: visible; */
+    /* z-index: 15; */
+}
+
+.sidebar-left::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff4d9;
+  height: 100vh;
+  width: 258px;
+  z-index: -1;
+  user-select: none;
+  pointer-events: none;
+
 }
 
 .close-icon span {
@@ -869,9 +885,11 @@ label {
 }
 
 .side-link-ul .has-sub:after {
-    display: inline-block;
-    float: right;
-    margin-right: 5px;
+    /* display: inline-block; */
+    /* float: right; */
+    /* margin-right: 5px; */
+    position: absolute;
+    padding-left: 8px;
     font-style: normal;
     font-size: 10px;
     font-variant: normal;
